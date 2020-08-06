@@ -54,3 +54,44 @@ header nav ul a {
     font-weight: 500;
     font-size: 1.3em;
 }
+
+main {
+    display: grid;
+    grid-template-columns: [start] 500px 500px 500px [end];
+    justify-content: space-evenly;
+    grid-gap: 20px;
+    padding: 30px;
+}
+main .section-title {
+    grid-column: start / end;
+}
+main .item {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin-left: 0;
+}
+.item .item-image {
+    margin: 0;
+    width: inherit;
+    height: inherit;
+}
+.item .item-image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.item .item-content {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    color: white;
+    background: rgba(255, 96, 97, 0.8);
+}
+.item .item-content .content-title {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.item .item-content .content-description {
+    font-size: 1em;
+}
