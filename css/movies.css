@@ -3,6 +3,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside content"
+    ;
+}
+header {
+    grid-area: header;
+}
 header .header-container {
     display: flex;
     height: 70px;
@@ -32,21 +43,21 @@ header .header-container {
     vertical-align: middle;
 }
 
-header nav {
+aside {
+    grid-area: aside;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
     padding: 20px 0;
     background: #ff6061;
 }
-header nav ul {
+aside ul {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-header nav ul a {
+aside ul a {
     color: white;
     display: block;
     cursor: pointer;
@@ -56,6 +67,7 @@ header nav ul a {
 }
 
 main {
+    grid-area: content;
     display: grid;
     grid-template-columns: [start] 500px 500px 500px [end];
     justify-content: space-evenly;
