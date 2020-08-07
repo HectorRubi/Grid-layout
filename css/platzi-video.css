@@ -1,3 +1,43 @@
+@font-face {
+    font-family: 'platzi-video';
+    src:  url('../fonts/platzi-video.eot?5j91om');
+    src:  url('../fonts/platzi-video.eot?5j91om#iefix') format('embedded-opentype'),
+    url('../fonts/platzi-video.ttf?5j91om') format('truetype'),
+    url('../fonts/platzi-video.woff?5j91om') format('woff'),
+    url('../fonts/platzi-video.svg?5j91om#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'platzi-video' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-save:before {
+    content: "\e900";
+}
+.icon-share:before {
+    content: "\e901";
+}
+.icon-previous:before {
+    content: "\e902";
+}
+.icon-play:before {
+    content: "\e903";
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -91,6 +131,7 @@ main {
         "comments suggest"
     ;
 }
+
 main .hero {
     width: 100%;
     height: 500px;
@@ -117,6 +158,10 @@ main .hero .hero-overlay {
     top: 0;
     left: 0;
     margin: 50px 30px;
+    font-size: 2em;
+}
+.hero-overlay .icon-play {
+    font-size: 8em;
 }
 
 main .info {
@@ -162,6 +207,13 @@ main .info {
 .info-container .icon {
     align-self: flex-end;
     justify-self: center;
+    text-align: center;
+}
+.info-container .icon i {
+    font-size: 1.5em;
+}
+.info-container .icon span {
+    display: block;
 }
 .info .generes span {
     border-radius: 15px;
