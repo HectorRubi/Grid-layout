@@ -12,6 +12,7 @@ aside {
     background-color: #171b2f;
     color: white;
     padding: 30px 10px;
+    box-sizing: border-box;
 }
 
 aside .logo {
@@ -78,4 +79,180 @@ aside .friends {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+main {
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-template-areas:
+        "hero hero"
+        "info info"
+        "comments suggest"
+    ;
+}
+main .hero {
+    width: 100%;
+    height: 500px;
+    background-image: url('https://images.pexels.com/photos/952437/pexels-photo-952437.jpeg?cs=srgb&dl=pexels-chad-kirchoff-952437.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    grid-area: hero;
+}
+main .hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-overlay .icon-previous {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px 30px;
+}
+
+main .info {
+    grid-area: info;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px 0;
+    border-bottom: 2px solid #bebebe;
+}
+.info .info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 15px;
+    margin-right: 30px;
+}
+.info-container .info-title {
+    grid-column: span 3;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.info-container .info-views {
+    grid-column: span 3;
+    color: #777;
+    font-size: 0.98em;
+}
+.info-container .info-add {
+    background-color: #ff1315;
+    border: 1px solid #ff1315;
+    border-radius: 10px;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    margin: 20px 30px 0 0;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.info-container .info-add:hover {
+    background-color: white;
+    color: #ff1315;
+    border: 1px solid #ff1315;
+}
+.info-container .icon {
+    align-self: flex-end;
+    justify-self: center;
+}
+.info .generes span {
+    border-radius: 15px;
+    color: white;
+    min-width: 80px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 0.8em;
+}
+.info .generes .purple {
+    background-color: #9551f7;
+}
+.info .generes .cyan {
+    background-color: #16eac3;
+}
+.info .generes .red {
+    background-color: #e01622;
+}
+.info .generes .pink {
+    background-color: #ec2f83;
+}
+
+main .comments {
+    justify-self: center;
+    padding: 20px;
+}
+.comments .comments-title {
+    font-size: 1em;
+    font-weight: 500;
+}
+.comments .comments-form {
+    display: flex;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+}
+.comments-form .form-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.comments-form .form-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1em;
+}
+.comments .comments-content {
+    padding-top: 20px;
+}
+.comments-content .comment-single {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.comment-single .comment-image {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.comment-single .comment-info {
+    margin: 0;
+}
+.comment-single .comment-info span {
+    display: block;
+}
+
+main .suggest {
+    padding: 20px;
+}
+.suggest .suggest-title {
+    font-size: 1em;
+    font-weight: 500;
+}
+.suggest .suggest-container {
+    width: 300px;
+}
+.suggest-container .suggest-image {
+    margin: 0;
+    width: 300px;
+}
+.suggest-container .suggest-image img {
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
 }
